@@ -1,4 +1,4 @@
-name: Patch recovery and vbmeta images
+name: Patch vbmeta images only
 
 on:
   workflow_dispatch:
@@ -18,10 +18,6 @@ jobs:
     - name: Patch vbmeta
       run: |
         ./patch-vbmeta.sh
-
-    - name: Patch recovery
-      run: |
-        ./patch-recovery.sh
 
     - name: Repack files into .tar.md5
       run: |
